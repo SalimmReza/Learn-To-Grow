@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const Subject = ({ subject }) => {
     const { name, id, logo, total } = subject
@@ -13,7 +14,8 @@ const Subject = ({ subject }) => {
                 <h2 className="card-title">{name}</h2>
                 <p>Total Quiz: {total}</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">Start Parctice <FontAwesomeIcon className='h-10 w-5 mx-3 text-white-800' icon={faArrowRight}></FontAwesomeIcon></button>
+
+                    <Link className='btn btn-primary' to={`/topic/${id}`}>Start Practice <FontAwesomeIcon className='h-10 w-5 mx-3 text-white-800' icon={faArrowRight}></FontAwesomeIcon> </Link>
 
                 </div>
             </div>

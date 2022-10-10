@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Topic from './components/Topic';
 import Statistic from './components/Statistic';
 import Blog from './components/Blog';
+import Quiz from './components/Quiz';
 
 
 
@@ -27,6 +28,13 @@ function App() {
           element: <Topic></Topic>
 
         },
+        {
+          path: '/topic/:subject',
+          loader: ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.subject}`)
+          },
+          element: <Quiz></Quiz>
+        },
 
         {
           path: 'statistics',
@@ -36,7 +44,6 @@ function App() {
 
         {
           path: 'blog',
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Blog></Blog>
 
         }
