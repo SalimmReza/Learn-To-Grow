@@ -3,31 +3,57 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const QuizDetails = ({ questions }) => {
-    // console.log(questions.correctAnswer)
+    // console.log(questions.question)
+
+    const correct = () => {
+        toast.success("Good Job!", {
+            position: "top-center",
+            autoClose: 1200,
+            theme: "colored"
+
+        });
+    }
+    const wrong = () => {
+        toast.error("Sorry Try Again!", {
+            position: "top-center",
+            theme: "colored",
+            autoClose: 1200
+        });
+    }
 
 
     const quesHandleClick = (e) => {
         const newCart = e.target.innerText;
         if (newCart !== questions.correctAnswer) {
             console.log(questions.correctAnswer.length, newCart.length)
+            wrong();
 
 
         }
         else {
-            alert('Great Job!')
-            console.log("c", questions.correctAnswer.length, newCart.length)
+
+            console.log(questions.correctAnswer.length, newCart.length)
+            correct();
         }
 
     }
 
 
 
+
+
     const eyeHandleClick = () => {
         const newCart = questions.correctAnswer;
         // console.log(newCart)
+        toast(newCart, {
+            position: "top-center",
+
+            autoClose: 2000
+        });
 
     }
 
@@ -35,6 +61,10 @@ const QuizDetails = ({ questions }) => {
     const a = spit.join("")
     const spit2 = questions.question.split('</p>')
     const b = spit.join("")
+
+
+
+
 
     return (
         <div>
@@ -52,6 +82,8 @@ const QuizDetails = ({ questions }) => {
                         <div className='flex items-center p-2 h-[100px] w-[50%] mx-5 border-2 border-green-200 rounded-lg'>
 
                             <h1 onClick={(e) => quesHandleClick(e)}>{questions.options[0]}</h1>
+
+
                         </div>
                         <div className=' flex items-center p-2 mx-5 h-[100px] w-[50%] border-2 border-green-200 rounded-lg '>
 
@@ -75,6 +107,8 @@ const QuizDetails = ({ questions }) => {
 
                 </div>
             </div>
+
+            <ToastContainer />
         </div>
     );
 };

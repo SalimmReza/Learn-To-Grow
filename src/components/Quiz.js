@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Array from './Array';
 import QuizDetails from './QuizDetails';
 
 const Quiz = () => {
     const item = useLoaderData();
     const subDetails = item.data
-    // console.log(subDetails)
+    // console.log(item.data.questions)
     const { name, questions } = subDetails
     // console.log(questions.indexof(options))
     const qs = subDetails.questions;
@@ -24,8 +25,14 @@ const Quiz = () => {
                 qs.map(questions => <QuizDetails
                     key={questions.id}
                     questions={questions}
+
                 ></QuizDetails>)
+
             }
+
+
+
+
 
 
 
