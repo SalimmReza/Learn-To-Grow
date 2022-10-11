@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const QuizDetails = ({ questions }) => {
     // console.log(questions.correctAnswer)
@@ -14,12 +14,7 @@ const QuizDetails = ({ questions }) => {
         if (newCart !== questions.correctAnswer) {
             console.log(questions.correctAnswer.length, newCart.length)
 
-            const notify = () => {
-                // Set to 10sec
-                toast.warning('Danger', { autoClose: 10000 });
-                toast('Hello Geeks');
 
-            }
         }
         else {
             alert('Great Job!')
@@ -48,7 +43,7 @@ const QuizDetails = ({ questions }) => {
 
                 <div className='h-[400px] w-full bg-white-500 shadow-lg rounded-lg mt-20 shadow-green-800 pt-2'>
 
-                    <h1 onClick={eyeHandleClick, notify} className='flex justify-end px-2'>  <FontAwesomeIcon className='flex justify-end cursor-pointer' icon={faEye}></FontAwesomeIcon></h1>
+                    <h1 onClick={eyeHandleClick} className='flex justify-end px-2'>  <FontAwesomeIcon className='flex justify-end cursor-pointer' icon={faEye}></FontAwesomeIcon></h1>
 
 
                     <h1>{a}</h1>
@@ -77,7 +72,7 @@ const QuizDetails = ({ questions }) => {
 
                     </div>
 
-                    <ToastContainer />
+
                 </div>
             </div>
         </div>
