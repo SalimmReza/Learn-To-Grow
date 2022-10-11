@@ -11,7 +11,7 @@ const Statistic = () => {
     return (
         <div>  <h1 className='mt-10' > Bar Charts of Total Quiz</h1>
 
-            <div className='flex justify-center my-10  mx-0'>
+            <div className='grid lg:grid-cols-4 w-[50%] m-auto  justify-center my-10  mx-0 '>
 
                 {
                     subjects.map(subject => <StatisticDetails

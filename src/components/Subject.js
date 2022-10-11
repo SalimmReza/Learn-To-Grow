@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Subject = ({ subject }) => {
     const { name, id, logo, total } = subject
     return (
-        <div className="card w-96 bg-gray-400 shadow-xl my-3">
+        <div className="card sm:w-full lg:w-[400px] bg-gray-400 shadow-xl my-3">
             <figure className=" pt-2 ">
                 <img src={logo} alt="Shoes" className="rounded-xl h-[100px]" />
             </figure>
