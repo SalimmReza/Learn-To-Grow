@@ -73,10 +73,10 @@ const QuizDetails = ({ questions }) => {
 
                 <div className=' h-full py-10  bg-white-500 shadow-lg rounded-lg mt-20 shadow-green-800 pt-2 '>
 
-                    <h1 onClick={eyeHandleClick} className='flex justify-end px-2'>  <FontAwesomeIcon className='flex justify-end cursor-pointer' icon={faEye}></FontAwesomeIcon></h1>
+                    <h1 onClick={eyeHandleClick} className='flex justify-end px-2'>  <FontAwesomeIcon className='flex justify-end  cursor-pointer' icon={faEye}></FontAwesomeIcon></h1>
 
 
-                    <h1 className='px-5'>{a}</h1>
+                    <h1 className='px-5 font-medium'>{a}</h1>
 
                     <div className='grid my-10 sm:grid-cols-1  lg:grid-cols-2 gap-4 '>
                         <div className='flex items-center p-2 h-[100px] w-[90%] mx-5 border-2 border-green-200 rounded-lg cursor-pointer'>

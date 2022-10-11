@@ -18,8 +18,8 @@ const Quiz = () => {
 
 
     return (
-        <div className='mt-20 '>
-            <h1>Quiz of {name}</h1>
+        <div className='mt-20 text-lg '>
+            <h1 className='text-xl font-bold'>Quiz of <span className='text-blue-800'>{name}</span> </h1>
 
             {
                 qs.map(questions => <QuizDetails

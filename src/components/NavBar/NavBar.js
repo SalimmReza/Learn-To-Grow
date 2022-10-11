@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -27,23 +27,23 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <a href='./' className="btn btn-ghost normal-case text-xl">LearnTo<span>Grow</span></a>
+                <a href='./' className="btn btn-ghost normal-case text-xl">LearnTo<span className='text-red-600'>Grow</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li>
-                        <Link to='topic'>Topic</Link>
+                        <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='topic'>Topic</NavLink>
                     </li>
                     <li>
-                        <Link to='statistics'>Statistics</Link>
+                        <NavLink to='statistics'>Statistics</NavLink>
                     </li>
                     <li>
-                        <Link to='blog'>Blog</Link>
+                        <NavLink to='blog'>Blog</NavLink>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='./' className="">Make Your <span>Future</span> </a>
+                <h1 className="font-medium">Make Your <span className='text-red-400'>Future</span> </h1>
             </div>
         </div>
     );

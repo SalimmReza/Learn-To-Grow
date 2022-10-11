@@ -10,13 +10,13 @@ const Topic = () => {
 
     return (
         <div>
-            <div className="relative flex items-center w-full  bg-center bg-cover h-96 dark:bg-gray-500 image" >
+            <div className="relative items-center w-full  bg-center bg-cover h-96 dark:bg-gray-500 image" >
                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
-                <div className=' flex flex-col-reverse justify-center'>
-                    <h2 className=" flex  font-semibold text-white ">
+                <div className=' flex flex-col-reverse'>
+                    <h2 className="  font-semibold text-white mt-2  ">
                         We help you build and maintain the health of your organisation. We support people to develop practical skills grounded in their real-world experience.
                     </h2>
-                    <h1 className='text-white'>Learn To Grow    Make your Future</h1>
+                    <h1 className='text-white mt-40 text-2xl font-bold'>Learn To Grow    Make your Future</h1>
 
                 </div>
 

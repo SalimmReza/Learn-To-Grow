@@ -6,6 +6,7 @@ import Topic from './components/Topic';
 import Statistic from './components/Statistic';
 import Blog from './components/Blog';
 import Quiz from './components/Quiz';
+import Errorpage from './components/Errorpage';
 
 
 
@@ -15,6 +16,7 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <Errorpage />,
       children: [
         {
           path: '/',
